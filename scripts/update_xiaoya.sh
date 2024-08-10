@@ -107,7 +107,7 @@ IMAGE_ID=$(docker images -q haroldli/xiaoya-tvbox:${TAG})
 echo -e "\e[32m下载最新Docker镜像，平台：${platform}, image tag: ${TAG}\e[0m"
 for i in 1 2 3 4 5
 do
-   docker pull --platform ${platform} k8s.m.daocloud.io/haroldli/xiaoya-tvbox:${TAG} && break
+   docker pull --platform ${platform} hub.rat.dev//haroldli/xiaoya-tvbox:${TAG} && break
 done
 
 NEW_IMAGE=$(docker images -q haroldli/xiaoya-tvbox:${TAG})
